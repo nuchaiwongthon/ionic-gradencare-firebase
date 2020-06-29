@@ -1,0 +1,226 @@
+// header
+.header-md:after {
+  left: 0;
+  bottom: -5px;
+  background-position: left 0 top -2px;
+  /* position: absolute; */
+  width: 100%;
+  // height: 5px;
+  background-image: none;
+  background-repeat: repeat-x;
+  content: '';
+}
+ul {
+  border-bottom: #999999 solid 2px;
+}
+li {
+  font-size: 12px !important;
+  color: #444444;
+}
+
+.switch-btn {
+  color: #444444;
+}
+.fas {
+  font-size: 18px;
+}
+.error-message {
+  font-size: 11px;
+  text-align: left;
+}
+ion-item {
+  --inner-padding-start: 0px;
+}
+ion-input {
+  font-size: 13px !important;
+}
+ion-checkbox {
+  margin-right: 8px !important;
+}
+.remember {
+  font-size: 13px !important;
+}
+ion-content {
+  text-align: center;
+}
+//*********** select ************ **/
+.sc-ion-select-popover-md {
+  font-size: 14px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+}
+ion-select,
+ion-datetime {
+  font-size: 14px !important;
+}
+ion-list.sc-ion-select-popover-md {
+  padding-top: 0px !important;
+}
+
+ion-item.sc-ion-select-popover-md {
+  font-size: 14px !important;
+  height: 47px !important;
+}
+
+//*********** radio ************ **/
+ion-radio.sc-ion-select-popover-md {
+  font-size: 14px !important;
+  height: 15px !important;
+  width: 15px !important;
+}
+
+//*********** loading ************ **/
+div.loading-wrapper {
+  padding: 18px !important;
+  border-radius: 14px !important;
+  font-size: 12px !important;
+}
+
+.sc-ion-loading-md {
+  color: #01579b !important;
+}
+
+.loading-content {
+  color: #585858 !important;
+}
+
+//*********** alert ************ **/
+.alert-wrapper {
+  border-radius: 14px !important;
+}
+.alert-radio-label {
+  font-size: 13px !important;
+}
+.alert-radio-button {
+  height: 40px !important;
+}
+.alert-radio-label {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.alert-message {
+  padding: 5px !important;
+}
+.alert-button-inner {
+  color: #01579b !important;
+}
+
+.alert-head {
+  padding: 13px !important;
+  padding-bottom: 0px !important;
+}
+
+h2.alert-title {
+  text-align: center !important;
+  font-size: 14px !important;
+}
+
+.alert-message {
+  font-size: 13px !important;
+  padding-bottom: 10px !important;
+}
+
+.alert-button-group {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+//*********** bar ************ **/
+ion-title {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  i {
+    color: white;
+  }
+}
+//********** picker **************/
+.picker-opt {
+  font-size: 17px !important;
+  height: 40px !important;
+}
+.marker-days {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px !important;
+  background-color: #e2e2e2 !important;
+  z-index: 1;
+}
+
+.setting-modal-sm .modal-wrapper {
+  height: 40%;
+  width: 60%;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+}
+.setting-modal-lg .modal-wrapper {
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  position: absolute;
+  display: block;
+}
+.setting-modal .modal-wrapper {
+  height: 80%;
+  width: 90%;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  bottom: 10%;
+  position: absolute;
+  display: block;
+}
+
+.css-icon {
+  background-image: url(../assets/images/geo-location/geolocation.png);
+}
+
+.gps-ring {
+  // background-color: #0080f8c0;
+  border: 3px solid #1385f0a9;
+  // margin-left: 1.5px;
+  // margin-top: 1.5px;
+  -webkit-border-radius: 30px;
+  height: 26px;
+  width: 26px;
+  -webkit-animation: pulsate 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  /*opacity: 0.0*/
+}
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+
+  50% {
+    opacity: 1.0;
+  }
+
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
+}
+.leaflet-popup-content-wrapper {
+  font-family: 'Prompt', sans-serif !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+}
+
+.geocoder-control-input,
+.leaflet-bar {
+  font-family: 'Prompt', sans-serif !important;
+  font-weight: 500 !important;
+}
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+//*********** spinner
+.center {
+  padding-top: 80vh;
+}

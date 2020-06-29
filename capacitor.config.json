@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "garden-care-remake",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

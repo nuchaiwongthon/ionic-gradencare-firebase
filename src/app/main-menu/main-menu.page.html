@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none" *ngIf="showWeather">
+    <div class="box-one">
+      <h5><i class="fas fa-location-arrow"></i> &nbsp;{{dataWeather?.name}}</h5>
+      <img [src]="dataWeather?.icon" alt="" />
+      <p class="absolute">
+        {{dataWeather?.description}}
+      </p>
+    </div>
+    <div class="box-two">
+      <p class="absolute">
+        <i class="fas fa-wind"></i> &nbsp;
+        {{dataWeather?.speed}} Km/h
+      </p>
+      <h3>{{dataWeather?.temp}}°</h3>
+      <p class="absolute">
+        <i class="fas fa-cloud"></i>
+        &nbsp;{{dataWeather?.all}} % &nbsp;
+        <i class="fas fa-tint"></i> &nbsp;{{dataWeather?.humidity}} %
+      </p>
+    </div>
+  </ion-item>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="logOut()">
+    <ion-fab-button color="light">
+      <i class="fas fa-sign-out-alt"></i>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

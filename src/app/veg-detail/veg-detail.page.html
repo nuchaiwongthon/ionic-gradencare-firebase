@@ -1,0 +1,55 @@
+<ion-header>
+  <div class="top-right" (click)="closeModal()">
+    <i class="fas fa-times" style="color: white;"></i>
+  </div>
+  <div style="text-align: center;">
+    <img [src]="dataSet?.imgpath" alt="" />
+    <h3>{{dataSet?.veg_name_th}}</h3>
+    <h4>{{dataSet?.veg_name_cl}}</h4>
+    <h4>{{dataSet?.veg_name_sc}}</h4>
+  </div>
+  <br />
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center">
+    <ion-row>
+      <ion-col size="2.5">
+        <p><b>ลักษณะ</b></p>
+      </ion-col>
+      <ion-col size="9.5">
+        <p>{{dataSet?.veg_struc}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2.5">
+        <p><b>สรรพคุณ</b></p>
+      </ion-col>
+      <ion-col size="9.5">
+        <p>{{dataSet?.veg_useful}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2.5">
+        <p><b>วิธีปลูก</b></p>
+      </ion-col>
+      <ion-col size="9.5">
+        <p>{{dataSet?.veg_plant}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2.5">
+        <p><b>วิธีดูแลรักษา</b></p>
+      </ion-col>
+      <ion-col size="9.5">
+        <p>{{dataSet?.veg_plant}}</p>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button mode="ios" (click)="generateQr()" expand="full">
+    <i class="fas fa-qrcode"></i>
+    &nbsp; สร้าง QR Code
+  </ion-button>
+</ion-footer>

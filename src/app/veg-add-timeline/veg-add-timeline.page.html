@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>เพิ่มปฏิทิน</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="generateData()">
+        <i class="fas fa-edit"></i>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>เลือกผัก</ion-label>
+    <ion-select [okText]="okText" [cancelText]="cancelText" placeholder="กรุณาเลือก" [(ngModel)]="selectData">
+      <ion-select-option *ngFor="let item of vegList" [value]="item">{{item?.veg_name}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>เลือกวันที่</ion-label>
+    <ion-datetime 
+    [dayShortNames]="dayShortNames" [monthShortNames]="monthShortNames" [(ngModel)]="startDate"
+    displayFormat="DDD DD MMM YYYY" [doneText]="doneText" [cancelText]="cancelText">
+    </ion-datetime>
+  </ion-item>
+  <br>
+  <div id="mapId"></div>
+</ion-content>

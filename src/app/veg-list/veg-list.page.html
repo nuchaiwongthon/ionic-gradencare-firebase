@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>รายการ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner class="center" *ngIf="!dataSet" name="lines"></ion-spinner>
+  <ion-virtual-scroll [items]="dataSet" approxItemHeight="40px" *ngIf="dataSet" >
+    <ion-item *virtualItem="let item" lines="none" (click)="gotoDetail(item)">
+      <ion-text>
+        <p><b> ชื่อผัก : </b>{{item.veg_name_th}}</p>
+        <p><b> ชื่อวงศ์ : </b>{{item.veg_name_cl}}</p>
+        <p><b> ชื่อวิทยาศาสตร์ : </b>{{item.veg_name_sc}}</p>
+      </ion-text>
+      <ion-text>
+        <img [src]="item.imgpath" alt="" />
+      </ion-text>
+    </ion-item>
+  </ion-virtual-scroll>
+</ion-content>

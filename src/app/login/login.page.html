@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="ion-padding">
+  <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
+ 
+    <ion-item lines="inset" class="ion-no-padding">
+      <ion-label  position="stacked" color="primary">Email</ion-label>
+      <ion-input mode="ios" type="text" [(ngModel)]="dataLogin.username" formControlName="email" clearInput clearOnEdit required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+ 
+    <ion-item lines="inset" class="ion-no-padding">
+      <ion-label  position="stacked" color="primary">Password</ion-label>
+      <ion-input mode="ios" type="password" [(ngModel)]="dataLogin.password" formControlName="password" class="form-controll" clearInput clearOnEdit required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item lines="none" class="ion-no-padding">
+      <ion-checkbox mode="md" slot="start" (ionChange)="rememberMe($event)" [checked]="dataLogin.remember"></ion-checkbox>
+      <ion-label class="remember">Remember Me</ion-label>
+    </ion-item>
+    <ion-button (click)="loginUser(validations_form.value)" expand="block">
+      Login
+    </ion-button>
+ 
+    <label class="error-message">{{errorMessage}}</label>
+  </form>
+  <p class="go-to-register">
+    No account yet? <a (click)="goToRegisterPage()">Create an account.</a>
+  </p>
+</ion-content>

@@ -1,0 +1,20 @@
+
+<ion-content>
+  <br>
+  <div>
+    <ngx-qrcode
+      [qrc-value]="dataSet.id"
+      [qrc-element-type]="elementType"
+      qrc-class="qrcode"
+      qrc-version="5"
+      [qrc-correction-level]="'H'"
+    >
+    </ngx-qrcode>
+  </div>
+</ion-content>
+<ion-footer>
+    <ion-button  mode="ios" (click)="downloadQr()" expand="block" expand="full">
+      <i class="fas fa-qrcode"></i>
+      &nbsp; ดาวน์โหลด
+    </ion-button>
+</ion-footer>

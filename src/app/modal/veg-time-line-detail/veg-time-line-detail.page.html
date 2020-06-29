@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ปฏิทิน [ {{dataObject.veg_name}} ]</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()" color="medium">
+        <i class="fas fa-times"></i>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-calendar
+    [(ngModel)]="date"
+    (ionChange)="onChange($event)"
+    [type]="type"
+    [options]="options"
+    [format]="'YYYY-MM-DD'"
+  >
+  </ion-calendar>
+  <hr />
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-no-padding" *ngFor="let item of dataSet">
+    <ion-row class="ion-no-padding">
+      <ion-col size="4" class="ion-no-padding">
+        <div class="relative">
+          <div class="date">{{item?.date}}</div>
+          <hr [style.display]="item?.display" class="line" />
+          <div class="point"></div>
+        </div>
+      </ion-col>
+      <ion-col size="8" class="ion-no-padding">
+        <ion-item class="ion-no-padding" lines="none">
+          <ion-col>
+            <h6>{{item?.type}}</h6>
+            <p>{{item?.detail}}</p>
+          </ion-col>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+  <br>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ปฏิทิน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner class="center" *ngIf="!dataSet" name="lines"></ion-spinner>
+  <div *ngIf="dataSet">
+    <ion-item-sliding *ngFor="let item of dataSet; let i = index;" #slidingItem>
+      <ion-item lines="none">
+        <ion-text style="width: 90%;">
+          <p><b> ชื่อผัก : </b> {{item?.data.veg_name}}</p>
+          <p><b> รายละเอียด : </b> {{item?.data.calendar_event[0].detail}}</p>
+          <p><b> สร้างเมื่อ : </b> {{item?.data.created_date}}</p>
+        </ion-text>
+        <ion-text (click)="gotoMap(item.data)">
+          <ion-card color="success" class="card-1">
+            <div class="ion-justify-content-center">
+              <h6>แผนที่</h6>
+            </div>
+          </ion-card>
+        </ion-text>
+        <ion-text (click)="gotoDetail(item.data)">
+          <ion-card color="secondary" class="card-1">
+            <div class="ion-justify-content-center">
+              <h6>ปฏิทิน</h6>
+            </div>
+          </ion-card>
+        </ion-text>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option
+          color="danger"
+          expandable
+          (click)="deleteCalendar(item.key, slidingItem)"
+        >
+          <i slot="start" class="fas fa-trash"></i> Delete
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </div>
+  <h6 class="no-data" *ngIf="dataSet?.length < 1">ไม่มีข้อมูล</h6>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="light" (click)="gotoAdd()">
+      <i class="fas fa-plus"></i>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

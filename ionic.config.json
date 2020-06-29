@@ -1,0 +1,8 @@
+{
+  "name": "garden-care-remake",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
