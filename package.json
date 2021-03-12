@@ -57,7 +57,7 @@
     "html2canvas": "^1.0.0-rc.5",
     "ion2-calendar": "^3.0.0-rc.0",
     "jquery": "^3.4.1",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "leaflet": "^1.6.0",
     "leaflet-measure-path": "^1.4.2",
     "mapbox": "^1.0.0-beta10",
